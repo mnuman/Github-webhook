@@ -1,0 +1,27 @@
+{
+    "GithubWebhook": {
+        "apigateway": {
+            "path": "/github",
+            "method": {
+                "value": "POST",
+                "items": [
+                    "GET",
+                    "POST",
+                    "PUT",
+                    "DELETE",
+                    "HEAD",
+                    "OPTIONS",
+                    "PATCH"
+                ]
+            },
+            "body": {
+                "NeedBeer": "Normaal altijd, maar nu even niet ... #ikpas",
+                "Type": "Testevent"
+            }
+        },
+        "lambda": {
+            "NeedBeer": "true",
+            "Type": "Testevent"
+        }
+    }
+}
