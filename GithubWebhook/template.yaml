@@ -7,9 +7,15 @@ Resources:
     Properties:
       Handler: GithubWebhook/lambda_function.lambda_handler
       Runtime: python3.6
-      Description: ''
+      Description: 'Tweet on commit'
       MemorySize: 128
       Timeout: 15
+      Environment: 
+        Variables:
+          CONSUMER_KEY: 5QaNYVeUSx6L4EtSqe50mR8SQ
+          CONSUMER_SECRET: P1io6NFS4Ql93pRJOmzXZeH16CAKUZ9MSiuKEYVDWFeIBR4gvC
+          ACCESS_TOKEN: 966365883114409984-DPLfbbqr5biFLcXNqZjXIgbZsJZ37rq
+          ACCESS_TOKEN_SECRET: t7gEDs5ecCevXUaeLGcLZ7CeZ2cFGtDoxp34svpaEQ9yb
       Events:
         LambdaMicroservice:
           Type: Api

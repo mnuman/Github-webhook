@@ -1,1 +1,11 @@
 .application.json
+certifi/
+chardet/
+examples/
+idna/
+oauthlib/
+requests/
+requests_oauthlib/
+tweepy/
+urllib3/
+six.py
