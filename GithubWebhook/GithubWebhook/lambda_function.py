@@ -15,7 +15,8 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
 def lambda_handler(event, context):
-    mytweet = f"Hi, {event['body']['commit'][0]['committer']['name']} just commited with message {event['body']['commit'][0]['message']}!"
+    body = json.loads(event['body'])
+    mytweet = f"Hi, {body['commit'][0]['committer']['name']} just commited with message {body['commit'][0]['message']}!"
     status = api.update_status(status=mytweet)
     
     response_body =  { "message": "Your tweet has been posted!"}
